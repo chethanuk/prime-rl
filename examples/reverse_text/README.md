@@ -225,8 +225,8 @@ uv run vf-eval reverse-text \
 
 ```bash
 helm uninstall my-exp
-# Optionally delete shared data:
-kubectl delete pvc prime-rl-shared-data
+# Optionally delete shared data. The PVC is named <release-name>-shared-data:
+kubectl delete pvc my-exp-shared-data
 ```
 
 **What the Helm chart provides:**
